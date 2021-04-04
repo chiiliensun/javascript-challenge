@@ -17,7 +17,8 @@ data.forEach((ufoSiting) => {
   });
 });
 
-// Filter code -- Function to run for both filter events
+
+// Filter code -- Function to run for filter events
 const runEnter = () => {
 
   // Prevent page from refreshing
@@ -29,11 +30,11 @@ const runEnter = () => {
 
   // variable for filter
   let filtered = tableData.filter(filterSiting => filterSiting.datetime === inputValue);
-  // console.log(filtered);
 
   // remove any children from list
   tbody.html("");
 
+  // created another append method to fill in only selected input datetime that matches
   filtered.forEach((filterSiting) => {
     let row = tbody.append("tr");
     Object.values(filterSiting).forEach(value => {
@@ -41,8 +42,8 @@ const runEnter = () => {
       cell.text(value);
     });
   });
-
 };
 
+// Event handlers
 filterbtn.on("click", runEnter);
 form.on("submit", runEnter);
