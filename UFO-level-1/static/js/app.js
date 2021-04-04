@@ -1,16 +1,14 @@
 // from data.js
 const tableData = data;
 
-// Get reference to the table body
+
+// Get reference to the table body, filter button and form
 const tbody = d3.select("tbody");
+      filterbtn = d3. select("#filter-btn");
+      form = d3.select("#form")
 
-// console logging the data from data.js
-// console.log(data);
 
-// Loop through data
-// data.forEach(ufoSiting => console.log(ufoSiting));
-
-// Using d3 to append one table row `tr` for each UFO ufoCiting
+// Using d3 to append data to table by using loop: forEach
 data.forEach((ufoSiting) => {
   let row = tbody.append("tr");
   Object.values(ufoSiting).forEach(value => {
@@ -18,3 +16,25 @@ data.forEach((ufoSiting) => {
     cell.text(value);
   });
 });
+
+// Filter code -- Function to run for both filter events
+const runEnter = () => {
+
+  // Prevent page from refreshing
+  d3.event.preventDefault();
+
+  // Select which input elements (datetime) and values
+  let inputElement = d3.select("#datetime");
+  let inputValue = inputElement.property("value");
+
+  // variable for filter
+  let filtered = tableData.filter(ufoSiting => ufoSiting.datetime == inputValue);
+  console.log(filtered);
+
+  // remove any children from list
+  tbody.html("");
+
+};
+
+filterbtn.on("click", runEnter);
+form.on("submit", runEnter);
