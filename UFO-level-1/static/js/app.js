@@ -5,10 +5,10 @@ const tableData = data;
 const tbody = d3.select("tbody");
 
 // console logging the data from data.js
-console.log(data);
+// console.log(data);
 
 // Loop through data
-data.forEach(ufoSiting => console.log(ufoSiting));
+// data.forEach(ufoSiting => console.log(ufoSiting));
 
 // Using d3 to append one table row `tr` for each UFO ufoCiting
 data.forEach((ufoSiting) => {
