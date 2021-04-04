@@ -34,6 +34,14 @@ const runEnter = () => {
   // remove any children from list
   tbody.html("");
 
+  filtered.forEach((ufoSiting) => {
+    let row = tbody.append("tr");
+    Object.values(ufoSiting).forEach(value => {
+      let cell = row.append("td");
+      cell.text(value);
+    });
+  });
+
 };
 
 filterbtn.on("click", runEnter);
