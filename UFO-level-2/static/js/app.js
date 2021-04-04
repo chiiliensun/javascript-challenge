@@ -21,9 +21,15 @@ const runEnter = () => {
   // Prevent page from refreshing
   d3.event.preventDefault();
 
-  // Select which input elements (datetime) and values
-  let inputElement = d3.select("#datetime");
-  let inputValue = inputElement.property("value");
+  // Select which input and values for all columns, combine inputElement and inputValue from level-1
+  let inputDate = (d3.select("#datetime")).property("value"),
+  let inputDate = (d3.select("#datetime")).property("value"),
+  let inputDate = (d3.select("#datetime")).property("value"),
+  let inputDate = (d3.select("#datetime")).property("value"),
+  let inputDate = (d3.select("#datetime")).property("value"),
+  let inputDate = (d3.select("#datetime")).property("value"),
+  let inputDate = (d3.select("#datetime")).property("value"),
+
 
   // variable for filter
   let filtered = tableData.filter(filterSiting => filterSiting.datetime === inputValue);
