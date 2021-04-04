@@ -28,15 +28,15 @@ const runEnter = () => {
   let inputValue = inputElement.property("value");
 
   // variable for filter
-  let filtered = tableData.filter(ufoSiting => ufoSiting.datetime == inputValue);
-  console.log(filtered);
+  let filtered = tableData.filter(filterSiting => filterSiting.datetime === inputValue);
+  // console.log(filtered);
 
   // remove any children from list
   tbody.html("");
 
-  filtered.forEach((ufoSiting) => {
+  filtered.forEach((filterSiting) => {
     let row = tbody.append("tr");
-    Object.values(ufoSiting).forEach(value => {
+    Object.values(filterSiting).forEach(value => {
       let cell = row.append("td");
       cell.text(value);
     });
