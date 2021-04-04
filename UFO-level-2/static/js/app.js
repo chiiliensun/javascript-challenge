@@ -22,13 +22,13 @@ const runEnter = () => {
   d3.event.preventDefault();
 
   // Select which input and values for all columns, combine inputElement and inputValue from level-1
-  let inputDate = (d3.select("#datetime")).property("value"),
-  let inputDate = (d3.select("#datetime")).property("value"),
-  let inputDate = (d3.select("#datetime")).property("value"),
-  let inputDate = (d3.select("#datetime")).property("value"),
-  let inputDate = (d3.select("#datetime")).property("value"),
-  let inputDate = (d3.select("#datetime")).property("value"),
-  let inputDate = (d3.select("#datetime")).property("value"),
+  let inputDate = (d3.select("#datetime")).property("value");
+  let inputCity = (d3.select("#city")).property("value");
+  let inputState = (d3.select("#state")).property("value");
+  let inputCountry = (d3.select("#country")).property("value");
+  let inputShape = (d3.select("#shape")).property("value");
+  let inputDuration = (d3.select("#durationminutes")).property("value");
+  let inputComments = (d3.select("#comments")).property("value");
 
 
   // variable for filter
