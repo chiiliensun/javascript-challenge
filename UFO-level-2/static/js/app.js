@@ -41,15 +41,34 @@ const runEnter = () => {
   };
 
   // city
-
+  if (inputCity) {
+    newfiltered = newfiltered.filter(siting => siting.city === inputCity);
+  };
 
   // state
-
+  if (inputDate) {
+    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  };
 
   // country
-
+  if (inputDate) {
+    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  };
 
   // shape
+  if (inputDate) {
+    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  };
+
+  // durationMinutes
+  if (inputDate) {
+    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  };
+
+  // comments
+  if (inputDate) {
+    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  };
 
   // remove any children from list
   tbody.html("");
