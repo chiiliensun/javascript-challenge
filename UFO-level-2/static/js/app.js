@@ -56,8 +56,8 @@ const runEnter = () => {
   };
 
   // shape
-  if (inputDate) {
-    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  if (inputShape) {
+    newfiltered = newfiltered.filter(siting => siting.shape === inputShape);
   };
 
   // durationMinutes
