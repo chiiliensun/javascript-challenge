@@ -32,7 +32,7 @@ const runEnter = () => {
   let newfilter = tableData;
 
   // variables for all columns by using if function and correct values
-  
+
   // datetime
   if (inputDate) {
     newfilter = newfilter.filter(siting => siting.datetime === inputDate);
