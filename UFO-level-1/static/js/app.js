@@ -2,9 +2,9 @@
 const tableData = data;
 
 // Get reference to the table body, filter button and form
-const tbody = d3.select("tbody");
-      filterbtn = d3. select("#filter-btn");
-      form = d3.select("#form")
+const tbody = d3.select("tbody"),
+      filterbtn = d3. select("#filter-btn"),
+      form = d3.select("#form");
 
 // Using d3 to append data to table by using loop: forEach
 data.forEach((ufoSiting) => {

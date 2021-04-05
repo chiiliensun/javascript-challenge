@@ -2,9 +2,9 @@
 const tableData = data;
 
 // Get reference to the table body, filter button and form
-const tbody = d3.select("tbody");
-      filterbtn = d3. select("#filter-btn");
-      form = d3.select("#form")
+const tbody = d3.select("tbody"),
+      filterbtn = d3. select("#filter-btn"),
+      form = d3.select("#form");
 
 // Using d3 to append data to table by using loop: forEach
 data.forEach((ufoSiting) => {
@@ -22,61 +22,49 @@ const runEnter = () => {
   d3.event.preventDefault();
 
   // Select which input and values for all columns, combine inputElement and inputValue from level-1
-  let inputDate = (d3.select("#datetime")).property("value");
-  let inputCity = (d3.select("#city")).property("value");
-  let inputState = (d3.select("#state")).property("value");
-  let inputCountry = (d3.select("#country")).property("value");
-  let inputShape = (d3.select("#shape")).property("value");
-  let inputDuration = (d3.select("#durationminutes")).property("value");
-  let inputComments = (d3.select("#comments")).property("value");
-
+  let inputDate = d3.select("#datetime").property("value"),
+      inputCity = d3.select("#city").property("value"),
+      inputState = d3.select("#state").property("value"),
+      inputCountry = d3.select("#country").property("value"),
+      inputShape = d3.select("#shape").property("value");
 
   // variable for filtered data
-  let newfiltered = tableData;
+  let newfilter = tableData;
 
   // variables for all columns by using if function and correct values
+  
   // datetime
   if (inputDate) {
-    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+    newfilter = newfilter.filter(siting => siting.datetime === inputDate);
   };
 
   // city
   if (inputCity) {
-    newfiltered = newfiltered.filter(siting => siting.city === inputCity);
+    newfilter = newfilter.filter(siting => siting.city === inputCity);
   };
 
   // state
   if (inputState) {
-    newfiltered = newfiltered.filter(siting => siting.state === inputState);
+    newfilter = newfilter.filter(siting => siting.state === inputState);
   };
 
   // country
-  if (inputCounty) {
-    newfiltered = newfiltered.filter(siting => siting.country === inputCountry);
+  if (inputCountry) {
+    newfilter = newfilter.filter(siting => siting.country === inputCountry);
   };
 
   // shape
   if (inputShape) {
-    newfiltered = newfiltered.filter(siting => siting.shape === inputShape);
+    newfilter = newfilter.filter(siting => siting.shape === inputShape);
   };
-
-  // durationMinutes
-  if (inputDuration) {
-    newfiltered = newfiltered.filter(siting => siting.durationMinutes === inputDuration);
-  };
-
-  // comments
-  // if (inputComments) {
-  //   newfiltered = newfiltered.filter(siting => siting.comments === inputComments);
-  // };
 
   // remove any children from list
   tbody.html("");
 
   // created another append method to fill in only selected input datetime that matches
-  newfiltered.forEach((filterSiting) => {
+  newfilter.forEach((siting) => {
     let row = tbody.append("tr");
-    Object.values(filterSiting).forEach(value => {
+    Object.values(siting).forEach(value => {
       let cell = row.append("td");
       cell.text(value);
     });
@@ -85,4 +73,4 @@ const runEnter = () => {
 
 // Event handlers
 filterbtn.on("click", runEnter);
-// form.on("submit", runEnter);
+form.on("submit", runEnter);
