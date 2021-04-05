@@ -66,8 +66,8 @@ const runEnter = () => {
   };
 
   // comments
-  if (inputDate) {
-    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  if (inputComments) {
+    newfiltered = newfiltered.filter(siting => siting.comments === inputComments);
   };
 
   // remove any children from list
