@@ -51,8 +51,8 @@ const runEnter = () => {
   };
 
   // country
-  if (inputDate) {
-    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  if (inputCounty) {
+    newfiltered = newfiltered.filter(siting => siting.country === inputCountry);
   };
 
   // shape
