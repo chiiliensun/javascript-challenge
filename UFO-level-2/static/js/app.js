@@ -34,11 +34,22 @@ const runEnter = () => {
   // variable for filtered data
   let newfiltered = tableData;
 
-  // variables for all columns by using if and correct values
-  // .filter(filterSiting => filterSiting.datetime === inputValue);
+  // variables for all columns by using if function and correct values
+  // datetime
   if (inputDate) {
     newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
   };
+
+  // city
+
+
+  // state
+
+
+  // country
+
+
+  // shape
 
   // remove any children from list
   tbody.html("");
