@@ -66,15 +66,15 @@ const runEnter = () => {
   };
 
   // comments
-  if (inputComments) {
-    newfiltered = newfiltered.filter(siting => siting.comments === inputComments);
-  };
+  // if (inputComments) {
+  //   newfiltered = newfiltered.filter(siting => siting.comments === inputComments);
+  // };
 
   // remove any children from list
   tbody.html("");
 
   // created another append method to fill in only selected input datetime that matches
-  filtered.forEach((filterSiting) => {
+  newfiltered.forEach((filterSiting) => {
     let row = tbody.append("tr");
     Object.values(filterSiting).forEach(value => {
       let cell = row.append("td");
