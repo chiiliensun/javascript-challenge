@@ -31,8 +31,14 @@ const runEnter = () => {
   let inputComments = (d3.select("#comments")).property("value");
 
 
-  // variable for filter
-  let filtered = tableData.filter(filterSiting => filterSiting.datetime === inputValue);
+  // variable for filtered data
+  let newfiltered = tableData;
+
+  // variables for all columns by using if and correct values
+  // .filter(filterSiting => filterSiting.datetime === inputValue);
+  if (inputDate) {
+    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  };
 
   // remove any children from list
   tbody.html("");
