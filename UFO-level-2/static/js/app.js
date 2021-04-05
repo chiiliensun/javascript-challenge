@@ -85,4 +85,4 @@ const runEnter = () => {
 
 // Event handlers
 filterbtn.on("click", runEnter);
-form.on("submit", runEnter);
+// form.on("submit", runEnter);
