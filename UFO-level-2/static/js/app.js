@@ -61,8 +61,8 @@ const runEnter = () => {
   };
 
   // durationMinutes
-  if (inputDate) {
-    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  if (inputDuration) {
+    newfiltered = newfiltered.filter(siting => siting.durationMinutes === inputDuration);
   };
 
   // comments
