@@ -46,8 +46,8 @@ const runEnter = () => {
   };
 
   // state
-  if (inputDate) {
-    newfiltered = newfiltered.filter(siting => siting.datetime === inputDate);
+  if (inputState) {
+    newfiltered = newfiltered.filter(siting => siting.state === inputState);
   };
 
   // country
